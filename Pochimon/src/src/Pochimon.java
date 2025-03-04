@@ -1,4 +1,8 @@
 package src;
+
+import java.util.List;
+import java.util.Random;
+
 public class Pochimon extends ElementAbs implements ICatchable {
     private int id;
     private String species;
@@ -85,15 +89,44 @@ public class Pochimon extends ElementAbs implements ICatchable {
         this.movements = movements;
     }
 
-    @Override
-    public void tryToCatch() 
+@Override
+    public boolean tryToCatch(Trainer trainer) 
     {
+    	
         System.out.println("Attempting to catch " + getName());
+        Random random=new Random();
+        int num=random.nextInt(100)+1;
+        
+        double rate = getCaptureRate(trainer);
+        boolean result=true;
+        if(num<=rate) {
+        	result= true;
+        }
+        else {
+        	result= false;
+        }
+        return result;
+        
+        
     }
 
-    @Override
-    public double getCaptureRate() 
-    {
-        return isWild ? 0.5 : 0.1;
+ @Override 
+    public double getCaptureRate(Trainer trainer){
+    	int trainerLevel= trainer.getLevel();
+    	List<Badge> trainerNumberOfBadges =trainer.getBadges();
+    	
+    	double taxa=(trainerLevel * 1.5) + (trainerNumberOfBadges.size() * 5);
+    	
+    	if(taxa>99){
+    		taxa=99;
+    	}
+    	else if (taxa<1) {
+			taxa=1;
+		}
+    	return taxa;
+    	
     }
+
+
+
 }

@@ -1,6 +1,6 @@
 package src;
 public interface ICatchable {
-    void tryToCatch();
+    boolean tryToCatch(Trainer trainer);
 
-    double getCaptureRate();
+    double getCaptureRate(Trainer trainer);
 }

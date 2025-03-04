@@ -30,9 +30,14 @@ public class Trainer extends ElementAbs {
         return badges;
     }
 
-    public void addBadge(Badge badge) 
-    {
-        badges.add(badge);
+    public void addBadge(Badge badge){
+    	if(badges.size()==8) {
+    		System.out.println("No podem afegir més insignies ");
+    	}
+    	else {
+    		badges.add(badge);
+		}
+        
     }
 
     public Pochimon[] getTeam() 
