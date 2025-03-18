@@ -126,6 +126,18 @@ public class Pochimon extends ElementAbs implements ICatchable {
     	return taxa;
     	
     }
+ 	
+ 
+ 	public void heal(int amount) {
+ 		
+ 		
+ 		
+ 		if(amount>0||hp!=hpMax) {
+ 			if((amount+hp)>hpMax) {
+ 	 			
+ 	 		}
+ 		}
+ 	}
 
 
 
