@@ -90,6 +90,86 @@ public class Pochimon extends ElementAbs implements ICatchable {
         this.movements = movements;
     }
 
+public int getHp() {
+		return hp;
+	}
+
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+
+	public int getHpMax() {
+		return hpMax;
+	}
+
+
+	public void setHpMax(int hpMax) {
+		this.hpMax = hpMax;
+	}
+
+
+	public int getAttack() {
+		return attack;
+	}
+
+
+	public void setAttack(int attack) {
+		this.attack = attack;
+	}
+
+
+	public int getDefense() {
+		return defense;
+	}
+
+
+	public void setDefense(int defense) {
+		this.defense = defense;
+	}
+
+
+	public int getSpAttack() {
+		return spAttack;
+	}
+
+
+	public void setSpAttack(int spAttack) {
+		this.spAttack = spAttack;
+	}
+
+
+	public int getSpDefense() {
+		return spDefense;
+	}
+
+
+	public void setSpDefense(int spDefense) {
+		this.spDefense = spDefense;
+	}
+
+
+	public int getSpeed() {
+		return speed;
+	}
+
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+
+	public int getExpEvol() {
+		return expEvol;
+	}
+
+
+	public void setExpEvol(int expEvol) {
+		this.expEvol = expEvol;
+	}
+
+
 @Override
     public boolean tryToCatch(Trainer trainer) 
     {
