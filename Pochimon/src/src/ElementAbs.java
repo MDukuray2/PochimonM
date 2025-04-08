@@ -1,7 +1,7 @@
 package src;
 public abstract class ElementAbs {
-    protected String name;
-    protected int level;
+    private String name;
+    private int level;
     private int exp;
     private int expToLevelUp;
 
